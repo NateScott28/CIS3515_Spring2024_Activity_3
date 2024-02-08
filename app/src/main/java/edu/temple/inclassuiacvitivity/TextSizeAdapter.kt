@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.TextView
 
 class TextSizeAdapter(context: Context, fonts: Array<int>) : BaseAdapter() {
 
@@ -23,7 +24,10 @@ class TextSizeAdapter(context: Context, fonts: Array<int>) : BaseAdapter() {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        TODO("Not yet implemented")
+        val textView = TextView(context);
+        textView.textSize = fontSizes[position];
+        textView.setPadding(5, 10, 0, 10);
+        return textView;
     }
 
 }
