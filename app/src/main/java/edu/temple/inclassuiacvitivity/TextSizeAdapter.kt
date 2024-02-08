@@ -15,7 +15,7 @@ class TextSizeAdapter(context: Context, fonts: Array<int>) : BaseAdapter() {
     }
 
     override fun getItem(position: Int): Any {
-        TODO("Not yet implemented")
+        return fontSizes[position];
     }
 
     override fun getItemId(position: Int): Long {
